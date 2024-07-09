@@ -1,0 +1,9 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "micropro/AncientConsole/ac_crystal2"
+	"$surfaceprop" "glass" 
+	"$model" 1
+	"$nocull" 0
+	"$translucent" 1
+	"$additive" 0
+}

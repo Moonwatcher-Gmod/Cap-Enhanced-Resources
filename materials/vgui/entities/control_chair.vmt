@@ -1,6 +1,6 @@
 "UnlitGeneric" 
 { 
-	"$basetexture"		"vgui/entities/control_chair" 
+	"$basetexture"		"vgui/entities/control_chair2" 
 	"$vertexcolor" 		1 
 	"$vertexalpha" 		1 
 	"$nolod" 			1 

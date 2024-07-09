@@ -1,0 +1,20 @@
+"LightmappedGeneric"
+
+//Texture made by Lord Trilobite
+{
+	"$basetexture"			"lordtrilobite/isd_metal06_dirty"
+	"$bumpmap"			"lordtrilobite/isd_metal01_NRM"
+	"$surfaceprop"			"metal"
+
+	"$normalmapalphaenvmapmask"	"1"
+	"$envmaptint"			"[0.04 0.04 0.04]"
+	"$refractamount"		"0.60" 
+	"$envmap"			"env_cubemap"
+
+	"$detail"			"detail\metal_detail_01"
+	"$detailscale"			"2.532"
+	"$detailblendfactor"		"0.40"
+	"$detailblendmode"		"0"
+
+
+}

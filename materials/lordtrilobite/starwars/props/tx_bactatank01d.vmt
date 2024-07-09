@@ -1,0 +1,16 @@
+"VertexLitGeneric"
+
+//Model and texture created by LordTrilobite
+//Model ported and glass material by KingPommes
+{
+	"$basetexture"			"lordtrilobite/starwars/props/tx_bactatank01d"
+	"$bumpmap"			"lordtrilobite/starwars/props/tx_bactatank01_NRM"
+
+	"$model"			"1"
+	"%notooltexture"		"1"
+
+	"$Phong"			"1"
+	"$PhongBoost"			"2.1"
+	"$phongexponent"		"7.8"
+	"$PhongFresnelRanges"		"[.05 .5 1]"
+}

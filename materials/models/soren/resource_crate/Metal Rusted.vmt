@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture"   "models/soren/resource_crate/Metal Rusted"
+	"$surfaceprop" 	 "brick"
+}

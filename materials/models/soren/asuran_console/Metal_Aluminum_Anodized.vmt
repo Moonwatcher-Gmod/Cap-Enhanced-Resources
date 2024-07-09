@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/soren/asuran_console/Metal_Aluminum_Anodized"
+	"$surfaceprop" 	 "brick"
+}

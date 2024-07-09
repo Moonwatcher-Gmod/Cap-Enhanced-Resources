@@ -1,0 +1,16 @@
+"Vertexlitgeneric"
+
+//Model and texture created by LordTrilobite
+{
+	"$basetexture"			"lordtrilobite/starwars/ISD/tx_IMPframes01"
+	"$surfaceprop"			"metal"
+
+	"$model"			"1"
+	"%notooltexture"		"1"
+
+	"$detail"			"detail\metal_detail_01"
+	"$detailscale"			"9.532"
+	"$detailblendfactor"		"0.40"
+	"$detailblendmode"		"0"
+
+}

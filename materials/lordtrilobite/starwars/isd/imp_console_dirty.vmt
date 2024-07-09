@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+
+//Model and texture created by LordTrilobite
+{
+	"$basetexture"			"lordtrilobite/starwars/ISD/imp_console_dirty"
+	"$bumpmap"			"lordtrilobite/starwars/ISD/imp_console_NRM"
+
+	"$normalmapalphaenvmapmask"	"1"
+
+	"$model"			"1"
+	"%notooltexture"		"1"
+
+	"$Phong"			"1"
+	"$PhongBoost"			"2.6"
+	"$phongexponent"		"16.8"
+	"$PhongFresnelRanges"		"[.05 .5 1]"
+}

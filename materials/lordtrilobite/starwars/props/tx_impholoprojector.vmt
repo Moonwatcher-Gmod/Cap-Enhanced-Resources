@@ -1,0 +1,24 @@
+"VertexLitGeneric"
+
+//Model and texture created by LordTrilobite
+{
+	"$basetexture"			"lordtrilobite/starwars/props/tx_IMPholoprojector"
+	"$bumpmap"			"lordtrilobite/starwars/props/tx_IMPholoprojector_NRM"
+
+	"$selfillum"			"1"
+
+	"$normalmapalphaenvmapmask"	"1"
+
+	"$model"			"1"
+	"%notooltexture"		"1"
+
+	"$Phong"			"1"
+	"$PhongBoost"			"5.6"
+	"$phongexponent"		"23.8"
+	"$PhongFresnelRanges"		"[.05 .5 1]"
+
+	"$detail"			"detail\metal_detail_01"
+	"$detailscale"			"7.532"
+	"$detailblendfactor"		"0.30"
+	"$detailblendmode"		"0"
+}

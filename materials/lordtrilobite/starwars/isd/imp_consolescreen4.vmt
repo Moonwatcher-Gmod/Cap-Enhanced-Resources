@@ -1,0 +1,22 @@
+"UnLitGeneric"
+
+//Model and texture created by LordTrilobite
+//TIE fighter screen
+{
+	"$basetexture"			"lordtrilobite/starwars/ISD/imp_consolescreen4"
+	"$surfaceprop"			"glass"
+   	"$selfillum"			"1"
+
+	"$model"			"1"
+	"%notooltexture"		"1"
+
+	"Proxies"
+	{
+		"AnimatedTexture"
+		{
+			"animatedTextureVar"		"$basetexture"
+			"animatedTextureFrameNumVar"	"$frame"
+			"animatedTextureFrameRate"	"0.7"
+		}
+	}
+} 

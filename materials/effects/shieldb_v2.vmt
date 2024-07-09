@@ -1,0 +1,17 @@
+"UnLitGeneric"
+{
+	"$basetexture"	"effects/gradient_v3"
+	"$model"	"1"
+	"$additive"	"1"
+	"$translucent"	"1"
+	"Proxies"
+	{
+		"TextureScroll"
+		{
+			"texturescrollvar"	"$basetexturetransform"
+			"texturescrollrate"	"-0.1"
+			"texturescrollangle"	"290"
+		}
+
+	}
+}

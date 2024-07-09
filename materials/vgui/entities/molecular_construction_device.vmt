@@ -1,6 +1,6 @@
 "UnlitGeneric" 
 { 
-	"$basetexture"		"vgui/entities/molecular_construction_device" 
+	"$basetexture"		"vgui/entities/molecular_construction_device2" 
 	"$vertexcolor" 		1 
 	"$vertexalpha" 		1 
 	"$nolod" 			1 

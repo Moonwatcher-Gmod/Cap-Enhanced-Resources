@@ -1,0 +1,19 @@
+"UnLitGeneric"
+{
+	"$basetexture"	"effects/ripples_v2"
+	"$model"	"1"
+	"$bumpmap"	"effects/normal"
+	"$additive"	"1"
+	"$translucent"	"1"
+
+	"Proxies"
+	{
+		"TextureScroll"
+		{
+			"texturescrollvar"	"$basetexturetransform"
+			"texturescrollrate"	"0.03"
+			"texturescrollangle"	"230"
+		}
+
+	}
+}

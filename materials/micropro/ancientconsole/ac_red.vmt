@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "micropro/AncientConsole/ac_red"
+	"$bumpmap" "micropro/AncientConsole/ac_red_normal"
+	"$surfaceprop" "metal" 
+	"$model" 1
+	"$nocull" 0
+	//"$translucent" 1
+	//"$additive" 0
+	"$selfillum" 0
+}

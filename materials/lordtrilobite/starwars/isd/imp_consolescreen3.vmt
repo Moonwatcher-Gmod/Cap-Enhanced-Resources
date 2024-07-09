@@ -1,0 +1,12 @@
+"UnLitGeneric"
+
+//Model and texture created by LordTrilobite
+{
+	"$basetexture"			"lordtrilobite/starwars/ISD/imp_consolescreen3"
+	"$surfaceprop"			"glass"
+   	"$selfillum"			"1"
+
+	"$model"			"1"
+	"%notooltexture"		"1"
+
+}

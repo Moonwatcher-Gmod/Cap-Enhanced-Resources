@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+
+//Model and texture created by LordTrilobite
+{
+	"$basetexture"			"lordtrilobite/starwars/props/tx_hyperfuelbarrel01"
+	"$bumpmap"			"lordtrilobite/starwars/props/tx_hyperfuelbarrel01_NRM"
+
+	"$normalmapalphaenvmapmask"	"1"
+
+	"$model"			"1"
+	"%notooltexture"		"1"
+
+	"$Phong"			"1"
+	"$PhongBoost"			"8.6"
+	"$phongexponent"		"23.8"
+	"$PhongFresnelRanges"		"[.05 .5 1]"
+}

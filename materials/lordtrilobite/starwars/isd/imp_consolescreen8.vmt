@@ -1,0 +1,22 @@
+"UnLitGeneric"
+
+//Model and texture created by LordTrilobite
+//Power unit screen
+{
+	"$basetexture"			"lordtrilobite/starwars/ISD/imp_consolescreen8"
+	"$surfaceprop"			"glass"
+   	"$selfillum"			"1"
+
+	"$model"			"1"
+	"%notooltexture"		"1"
+
+	"Proxies"
+	{
+		"AnimatedTexture"
+		{
+			"animatedTextureVar"		"$basetexture"
+			"animatedTextureFrameNumVar"	"$frame"
+			"animatedTextureFrameRate"	"2.3"
+		}
+	}
+}

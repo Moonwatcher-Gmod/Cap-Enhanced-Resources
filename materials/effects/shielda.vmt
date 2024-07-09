@@ -2,14 +2,16 @@
 {
 	"$basetexture"	"effects/ripples"
 	"$model"	"1"
+	"$bumpmap"	"effects/normal"
 	"$additive"	"1"
+	"$translucent"	"1"
 
 	"Proxies"
 	{
 		"TextureScroll"
 		{
 			"texturescrollvar"	"$basetexturetransform"
-			"texturescrollrate"	"0.05"
+			"texturescrollrate"	"0.03"
 			"texturescrollangle"	"230"
 		}
 

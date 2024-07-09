@@ -1,0 +1,28 @@
+"VertexLitGeneric"
+
+//Model and texture created by LordTrilobite
+{
+	"$basetexture"			"lordtrilobite/isd_metal06"
+	"$bumpmap"			"lordtrilobite/isd_metal01_NRM"
+	"$surfaceprop"			"metal"
+
+	"$model"			"1"
+	"%notooltexture"		"1"
+
+	"$Phong"			"1"
+	"$PhongBoost"			"0.9"
+	"$phongexponent"		"7.8"
+	"$PhongFresnelRanges"		"[0.5 0.5 0.5]"
+
+	//"$normalmapalphaenvmapmask"	"1"
+	//"$envmaptint"			"[0.15 0.15 0.15]"
+	//"$refractamount"		"0.60" 
+	//"$envmap"			"env_cubemap"
+
+	"$detail"			"detail\metal_detail_01"
+	"$detailscale"			"2.532"
+	"$detailblendfactor"		"0.40"
+	"$detailblendmode"		"0"
+
+
+}

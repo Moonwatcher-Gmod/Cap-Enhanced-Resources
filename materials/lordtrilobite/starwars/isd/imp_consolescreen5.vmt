@@ -1,0 +1,22 @@
+"UnLitGeneric"
+
+//Model and texture created by LordTrilobite
+//Lambda shuttle screen
+{
+	"$basetexture"			"lordtrilobite/starwars/ISD/imp_consolescreen5"
+	"$surfaceprop"			"glass"
+   	"$selfillum"			"1"
+
+	"$model"			"1"
+	"%notooltexture"		"1"
+
+	"Proxies"
+	{
+		"AnimatedTexture"
+		{
+			"animatedTextureVar"		"$basetexture"
+			"animatedTextureFrameNumVar"	"$frame"
+			"animatedTextureFrameRate"	"1.1"
+		}
+	}
+}

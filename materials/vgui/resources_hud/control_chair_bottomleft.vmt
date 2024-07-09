@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$basetexture" "VGUI/resources_hud/control_chair_bottomleft"
+				"$selfillum" 1
+	"$translucent" 1
+}

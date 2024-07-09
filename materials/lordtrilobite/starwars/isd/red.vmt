@@ -1,0 +1,17 @@
+"UnLitGeneric"
+
+//Model and texture created by LordTrilobite
+{
+	"$basetexture"			"lordtrilobite/starwars/ISD/red"
+	"$surfaceprop"			"glass"
+   	"$selfillum"			"1"
+
+	"$normalmapalphaenvmapmask"	"1"
+	"$envmaptint"			"[0.2 0.2 0.2]"
+	"$refractamount"		".60" 
+	"$envmap"			"env_cubemap"
+
+	"$model"			"1"
+	"%notooltexture"		"1"
+
+}

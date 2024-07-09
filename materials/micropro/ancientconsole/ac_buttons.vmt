@@ -1,0 +1,10 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "micropro/AncientConsole/ac_buttons"
+	"$surfaceprop" "glass" 
+	"$model" 1
+	"$nocull" 0
+	"$translucent" 0
+	"$additive" 0
+	"$selfillum" 1
+}

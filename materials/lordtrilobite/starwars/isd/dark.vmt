@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+
+//Model and texture created by LordTrilobite
+{
+	"$basetexture"			"lordtrilobite/light_off_dirty"
+	"$surfaceprop"			"glass"
+
+	"$normalmapalphaenvmapmask"	"1"
+	"$envmaptint"			"[0.2 0.2 0.2]"
+	"$refractamount"		".60" 
+	"$envmap"			"env_cubemap"
+
+
+	"$model"			"1"
+	"%notooltexture"		"1"
+
+}

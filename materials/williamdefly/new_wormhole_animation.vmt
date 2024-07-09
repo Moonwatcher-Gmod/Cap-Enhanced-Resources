@@ -1,0 +1,14 @@
+"UnlitGeneric"
+{
+	"$basetexture" "new_wormhole_animation.vtf"
+
+	"Proxies"
+	{
+		"AnimatedOffsetTexture"
+		{
+			"animatedtexturevar" "$basetexture"
+			"animatedtextureframenumvar" "$frame"
+			"animatedtextureframerate" 20.00
+		}
+	}
+}
