@@ -1,0 +1,8 @@
+"VertexlitGeneric"
+{
+	"$basetexture"   "soren/ori_door/ori_door_frame"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .1 .1 .1 ]"
+	"$envmapfresnel"	"1"
+	"$envmapFresnelMinMaxExp"	"[0 5 .4]"
+}

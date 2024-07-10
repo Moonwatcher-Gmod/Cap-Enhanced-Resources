@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "soren/ori_door/ori_door_glass"
+	"$surfaceprop" "Glass"
+	"$translucent" 1
+}
