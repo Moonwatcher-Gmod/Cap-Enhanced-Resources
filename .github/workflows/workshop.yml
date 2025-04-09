@@ -1,0 +1,94 @@
+name: Workshop Upload
+
+on:
+    workflow_dispatch:
+        inputs:
+            changelog:
+                description: "Enter a change note"
+                required: false
+                default: ""
+
+jobs:
+    publish:
+        runs-on: self-hosted
+        container:
+            image: catthehacker/ubuntu:act-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+              with:
+                  path: addon
+
+            - name: Sort files
+              working-directory: ${{ github.workspace }}/addon/
+              run: bash sort.sh
+
+            - name: Setup SteamCMD
+              id: steamcmd
+              uses: CyberAndrii/setup-steamcmd@v1.2.0
+
+            - name: Install fastgmad
+              run: |
+                  if ! command -v fastgmad &> /dev/null
+                  then
+                    sudo apt-get install unzip -y
+                    wget https://github.com/WilliamVenner/fastgmad/releases/latest/download/fastgmad_linux.zip
+                    unzip fastgmad_linux.zip
+                    chmod +x fastgmad
+                    mv fastgmad /usr/local/bin/
+                    rm fastgmad_linux.zip
+                  fi
+
+            - name: Create VDFs
+              working-directory: ${{ github.workspace }}/addon/upload/
+              run: |
+                  echo '"workshopitem"
+                  {
+                      "appid" "4000"
+                      "publishedfileid" "3015821171"
+                      "contentfolder" "'${{ github.workspace }}/addon/upload/content1.gma'"
+                      "changenote" "'${{ github.event.inputs.changelog }}'"
+                  }' > content1/workshop.vdf
+
+                  echo '"workshopitem"
+                  {
+                      "appid" "4000"
+                      "publishedfileid" "2744960254"
+                      "contentfolder" "'${{ github.workspace }}/addon/upload/content2.gma'"
+                      "changenote" "'${{ github.event.inputs.changelog }}'"
+                  }' > content2/workshop.vdf
+
+                  echo '{
+                      "title": "CAP Enhanced Resources 1",
+                      "type": "ServerContent",
+                      "ignore": [
+                          ".*",
+                          "*.md",
+                          "*.sh",
+                          "addon.txt",
+                          "icon.tga"
+                      ]
+                  }' >> content1/addon.json
+
+                  echo '{
+                      "title": "CAP Enhanced Resources 2",
+                      "type": "ServerContent",
+                      "ignore": [
+                          ".*",
+                          "*.md",
+                          "*.sh",
+                          "addon.txt",
+                          "icon.tga"
+                      ]
+                  }' >> content2/addon.json
+
+                  fastgmad create -folder content1/ -out content1.gma
+                  fastgmad create -folder content2/ -out content2.gma
+
+            - name: Update Addon
+              working-directory: ${{ github.workspace }}/addon/upload/
+              env:
+                  username: ${{ secrets.STEAM_USERNAME }}
+                  password: ${{ secrets.STEAM_PASSWORD }}
+              run: |
+                  steamcmd +login $username $password +workshop_build_item content1/workshop.vdf +workshop_build_item content2/workshop.vdf +quit
