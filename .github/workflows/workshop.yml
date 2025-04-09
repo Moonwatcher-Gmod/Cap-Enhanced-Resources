@@ -11,8 +11,6 @@ on:
 jobs:
     publish:
         runs-on: self-hosted
-        container:
-            image: catthehacker/ubuntu:act-latest
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4
