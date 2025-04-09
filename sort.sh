@@ -12,6 +12,11 @@ process_file() {
     local MODIFICATION_TIME
     MODIFICATION_TIME=$(git log -1 --format=%ct -- "$file" 2>/dev/null || true)
 
+    # Skip PNG files
+    if [[ "$file" == *.png ]]; then
+        return
+    fi
+
     if [[ -n "$MODIFICATION_TIME" ]]; then
         local FILE_SIZE
         FILE_SIZE=$(stat -c%s "$file" 2>/dev/null)
@@ -51,14 +56,10 @@ if [ $TOTAL_SORTED -eq 0 ]; then
     exit 1
 fi
 
-SORT_END_TIME=$(date +%s.%N)
-SORT_DURATION=$(bc <<< "scale=0; $SORT_END_TIME - $SORT_START_TIME")
-
 echo -e "\n=== Sorting Summary ==="
 printf "Total files processed: %d\n" "$TOTAL_PROCESSED"
 printf "Total files sorted: %d\n" "$TOTAL_SORTED"
 printf "Total unsorted files: %d\n" "${#UNSORTED_FILES[@]}"
-printf "Time taken for sorting: %.0f seconds\n" "$SORT_DURATION"
 
 if [ ${#UNSORTED_FILES[@]} -gt 0 ]; then
     echo "The following files could not be sorted due to missing modification time:"
@@ -90,6 +91,11 @@ FAILED_MOVES=()
 for entry in "${SORTED_FILES[@]}"; do
     IFS='|' read -r mod_time file_size file_path <<< "$entry"
 
+    # Skip PNG files during the moving process
+    if [[ "$file_path" == *.png ]]; then
+        continue
+    fi
+
     file_size=${file_size%.*}
 
     if (( current_addon_size + file_size > MAX_SIZE )); then
@@ -113,12 +119,8 @@ for entry in "${SORTED_FILES[@]}"; do
     fi
 done
 
-MOVE_END_TIME=$(date +%s.%N)
-MOVE_DURATION=$(bc <<< "scale=0; $MOVE_END_TIME - $MOVE_START_TIME")
-
 echo -e "\n=== Move Summary ==="
 printf "Total files moved: %d\n" "$TOTAL_MOVED"
-printf "Total time taken for moving files: %.0f seconds\n" "$MOVE_DURATION"
 if [ ${#FAILED_MOVES[@]} -gt 0 ]; then
     echo "The following files failed to move:"
     for file in "${FAILED_MOVES[@]}"; do
