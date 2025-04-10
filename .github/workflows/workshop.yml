@@ -37,8 +37,8 @@ jobs:
                     rm fastgmad_linux.zip
                   fi
 
-            - name: Create VDFs
-              working-directory: ${{ github.workspace }}/addon/upload/
+            - name: Create Workshop files
+              working-directory: ${{ github.workspace }}/addon/upload
               run: |
                   echo '"workshopitem"
                   {
@@ -46,7 +46,7 @@ jobs:
                       "publishedfileid" "3015821171"
                       "contentfolder" "'${{ github.workspace }}/addon/upload/content1.gma'"
                       "changenote" "'${{ github.event.inputs.changelog }}'"
-                  }' > content1/workshop.vdf
+                  }' >> content1.vdf
 
                   echo '"workshopitem"
                   {
@@ -54,17 +54,14 @@ jobs:
                       "publishedfileid" "2744960254"
                       "contentfolder" "'${{ github.workspace }}/addon/upload/content2.gma'"
                       "changenote" "'${{ github.event.inputs.changelog }}'"
-                  }' > content2/workshop.vdf
+                  }' >> content2.vdf
 
                   echo '{
                       "title": "CAP Enhanced Resources 1",
                       "type": "ServerContent",
                       "ignore": [
                           ".*",
-                          "*.md",
-                          "*.sh",
-                          "addon.txt",
-                          "icon.tga"
+                          "*.txt"
                       ]
                   }' >> content1/addon.json
 
@@ -73,20 +70,16 @@ jobs:
                       "type": "ServerContent",
                       "ignore": [
                           ".*",
-                          "*.md",
-                          "*.sh",
-                          "addon.txt",
-                          "icon.tga"
+                          "*.txt"
                       ]
                   }' >> content2/addon.json
 
                   fastgmad create -folder content1/ -out content1.gma
                   fastgmad create -folder content2/ -out content2.gma
 
-            - name: Update Addon
-              working-directory: ${{ github.workspace }}/addon/upload/
+            - name: Update Addons
               env:
                   username: ${{ secrets.STEAM_USERNAME }}
                   password: ${{ secrets.STEAM_PASSWORD }}
               run: |
-                  steamcmd +login $username $password +workshop_build_item content1/workshop.vdf +workshop_build_item content2/workshop.vdf +quit
+                  steamcmd +login $username $password +workshop_build_item ${{ github.workspace }}/addon/upload/content1.vdf +workshop_build_item ${{ github.workspace }}/addon/upload/content2.vdf +quit
