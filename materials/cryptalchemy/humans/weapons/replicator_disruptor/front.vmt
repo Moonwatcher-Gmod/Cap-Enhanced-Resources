@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "cryptalchemy/humans/weapons/replicator_disruptor/front"
+	"$envmap" env_cubemap
+	"$envmapmask" "cryptalchemy/humans/weapons/replicator_disruptor/front_specular"
+}

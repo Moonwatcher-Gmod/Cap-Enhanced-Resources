@@ -1,0 +1,5 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "cryptalchemy/humans/weapons/replicator_disruptor/blue"
+	"$selfillum" "1"
+}

@@ -1,0 +1,8 @@
+"UnlitGeneric" 
+{ 
+	"$basetexture" 		"vgui/entities/adria_dialer"
+	"$vertexcolor" 		1 
+	"$vertexalpha" 		1 
+	"$nolod" 			1 
+} 
+
