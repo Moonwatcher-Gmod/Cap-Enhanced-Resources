@@ -13,7 +13,7 @@ jobs:
         runs-on: self-hosted
         steps:
             - name: Checkout repository
-              uses: actions/checkout@v4
+              uses: actions/checkout@v6
               with:
                   path: addon
 
@@ -23,7 +23,7 @@ jobs:
 
             - name: Setup SteamCMD
               id: steamcmd
-              uses: CyberAndrii/setup-steamcmd@v1.2.0
+              uses: CyberAndrii/setup-steamcmd@master
 
             - name: Install fastgmad
               run: |
